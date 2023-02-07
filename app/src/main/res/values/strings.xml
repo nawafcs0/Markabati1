@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">خدمات السيارات</string>
+    <string name="home_nav">الرئيسية</string>
+    <string name="requests_nav">طلباتي</string>
+    <string name="account_nav">حسابي</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">ابحث</string>
+    <string name="workshop_title">ورشة سيارات</string>
+    <string name="workshop_location">القنفذة</string>
+    <string name="workshop_rate">5</string>
+    <string name="work_hours">ساعات العمل</string>
+    <string name="from">من</string>
+    <string name="to">الى</string>
+    <string name="saturday">السبت</string>
+    <string name="thursday">الخميس</string>
+    <string name="car_title">ناقلة سيارات</string>
+    <string name="price">1 ريال/km</string>
+    <string name="price_details">السعر</string>
+    <string name="spare_parts_title">اسم القطعة</string>
+    <string name="spare_parts_type">ياباني</string>
+    <string name="Delivery_date">موعد الوصول</string>
+    <string name="cancel">الغاء الطلب</string>
+
+    <string name="logInString">تسجيل الدخول</string>
+    <string name="signUp">انشاء حساب</string>
+
+    <string name="emailAr">البريد الالكتروني</string>
+    <string name="usernameAr">اسم المستخدم</string>
+    <string name="passwordAr">الرمز السري</string>
+    <string name="confirmPassowrdAR">تأكيد الرمز السري</string>
+    <string name="signUpAr">تسجيل مستخدم جديد</string>
+
+
+    <string name="back">رجوع</string>
+    <string name="welcomeAR">مرحبا !</string>
+    <string name="phoneNumAr">رقم الجوال</string>
+    <string name="carTypeAr">نوع السيارة</string>
+    <string name="riceAr">السعر</string>
+
+    <string name="addTruckAr">اضافة شاحة</string>
+
+    <string name="addAr">أضف</string>
+
+
+    <string name="profileAr1">الملف </string>
+    <string name="profileAr2">الشحصي</string>
+    <string name="nameAr">الاسم</string>
+    <string name="cityAr">المدينة</string>
+</resources>
