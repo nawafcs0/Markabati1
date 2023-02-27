@@ -3,6 +3,7 @@ package com.mycode.carservice.model
 import java.io.Serializable
 
 data class WorkShop(
+    val workshopId:String,
     val city : String,
     val closingHours:String,
     val detail:String,
@@ -12,5 +13,6 @@ data class WorkShop(
     val openingHours: String,
     var rating: ArrayList<Int>,
     val startWorkingDay:String,
-    val phoneNumber: String
+    val phoneNumber: String,
+    val workshopEmail:String
 ):Serializable

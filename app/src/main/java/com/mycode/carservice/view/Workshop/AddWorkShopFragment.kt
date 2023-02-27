@@ -18,7 +18,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.mycode.carservice.R
 import com.mycode.carservice.databinding.FragmentAddWorkShopBinding
 import com.mycode.carservice.model.WorkShop
-import com.mycode.carservice.view.MapsFragment
+import com.mycode.carservice.view.Customer.MapsFragment
 
 
 class AddWorkShopFragment : Fragment() {
@@ -63,8 +63,21 @@ class AddWorkShopFragment : Fragment() {
                 var rating = ArrayList<Int>()
 //                rating.add(true)
                 //TODO adding workshop image from this page to DB
-                add(WorkShop(city.toString(),closingH.toString(),detail.toString(),"",closeD.toString()
-                    ,name.toString(),openH.toString(),rating,closeD.toString(),phone.toString()))
+                add(WorkShop(
+                    "",
+                    city.toString(),
+                    closingH.toString(),
+                    detail.toString(),
+                    ""
+                    ,
+                    closeD.toString(),
+                    name.toString(),
+                    openH.toString(),
+                    rating,
+                    closeD.toString(),
+                    phone.toString(),
+                    ""
+                ))
                 loadFragment(WorkshopFragment())
 
 //                storageRef.child("workshop/Image${System.currentTimeMillis()}").putFile(imgUri)

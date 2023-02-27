@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/admin_requests"
+        android:title="الطلبات"
+        android:icon="@drawable/requests_ic"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/admin_spareParts"
+        android:title="قطع الغيار"
+        android:icon="@drawable/account_services"
+        >
+
+    </item>
+
+</menu>

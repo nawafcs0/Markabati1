@@ -8,20 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.mycode.carservice.R
 import com.mycode.carservice.model.CarTransporter
+import com.mycode.carservice.model.WorkShop
+import com.mycode.carservice.view.Customer.RequestTransporterFragment
+import com.mycode.carservice.view.Customer.RequestWorkshopFragment
 import com.squareup.picasso.Picasso
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "transporter"
 
 
 class CarTransporterDetailsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var param1: CarTransporter
 
     private lateinit var fab: FloatingActionButton
@@ -66,12 +67,21 @@ class CarTransporterDetailsFragment : Fragment() {
             Picasso.get().load(param1.img).placeholder(R.drawable.car_trasnporter_ic).resize(1100,700).into(transporterImage)
 
         fab.setOnClickListener(View.OnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + param1.transporterPhoneNumber))
-            startActivity(intent)
+           loadDetails(param1)
         })
 
     }
-
+    private fun loadDetails(transporter: CarTransporter) {
+        val bundle = Bundle()
+        bundle.putSerializable("transporter",transporter)
+        //TODO
+        val fragment = RequestTransporterFragment()
+        fragment.arguments = bundle
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(com.mycode.carservice.R.id.frame_layout, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
     companion object {
         @JvmStatic
         fun newInstance(param1: Int) =

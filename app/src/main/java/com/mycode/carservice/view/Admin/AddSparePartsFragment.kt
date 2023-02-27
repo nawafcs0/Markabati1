@@ -1,4 +1,4 @@
-package com.mycode.carservice.view.Spareparts
+package com.mycode.carservice.view.Admin
 
 import android.os.Bundle
 import android.util.Log
@@ -6,18 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.databinding.FragmentAddSparePartsBinding
-import com.mycode.carservice.model.SparePartTable
-import com.mycode.carservice.model.SpareParts
-import com.mycode.carservice.model.WorkShop
-import com.mycode.carservice.view.Workshop.AddWorkShopFragment
-import com.mycode.carservice.view.Workshop.WorkshopFragment
+import com.mycode.carservice.view.Spareparts.SparePartsFragment
 
 
 class AddSparePartsFragment : Fragment() {
@@ -77,7 +72,7 @@ class AddSparePartsFragment : Fragment() {
         db.collection("SpareParts")
             .add(sparePart)
             .addOnSuccessListener { documentReference ->
-                loadFragment(SparePartsFragment())
+                loadFragment(com.mycode.carservice.view.Admin.SparePartsFragment())
                 Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
             }
             .addOnFailureListener { e ->
@@ -87,7 +82,7 @@ class AddSparePartsFragment : Fragment() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout, fragment)
+        transaction.replace(R.id.admin_frame_layout, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

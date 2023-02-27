@@ -1,19 +1,16 @@
-package com.mycode.carservice.view
+package com.mycode.carservice.view.Customer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mycode.carservice.R
 import com.mycode.carservice.adapter.HomeAdapter
 import com.mycode.carservice.model.Services
-import com.mycode.carservice.view.SigninSignup.LoginFragment
 import com.mycode.carservice.view.Spareparts.SparePartsFragment
 import com.mycode.carservice.view.Transportation.CarTransporterFragment
 import com.mycode.carservice.view.Workshop.WorkshopFragment

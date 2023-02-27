@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,9 +14,6 @@ import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.adapter.CarTransporterAdapter
 import com.mycode.carservice.model.CarTransporter
-import com.mycode.carservice.model.TransporterTable
-import com.mycode.carservice.view.Transportation.CarTransporterDetailsFragment
-import com.mycode.carservice.view.Transportation.AddTransporterFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,10 +57,10 @@ class CarTransporterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         datainit()
         val layoutManager= LinearLayoutManager(context)
-        var btn = view.findViewById<Button>(R.id.addBtn)
-        btn.setOnClickListener {
-            loadFragment(AddTransporterFragment())
-        }
+//        var btn = view.findViewById<Button>(R.id.addBtn)
+//        btn.setOnClickListener {
+//            loadFragment(AddTransporterFragment())
+//        }
         recyclerView=view.findViewById(R.id.car_transporter_rv)
         recyclerView.layoutManager=layoutManager
         recyclerView.setHasFixedSize(true)
@@ -122,22 +118,21 @@ class CarTransporterFragment : Fragment() {
     private fun datainit() {
         carTransporterList = arrayListOf<CarTransporter>()
 
-//            .whereEqualTo("city", globalAddress!!.subAdminArea)
-
         db.collection("Transporter")
-           // .whereEqualTo("city", globalCity)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d("TAG", "${document.id} => ${document.data}")
                     val documentData = document.data
                     val transporter = CarTransporter(
+                        document.id,
                         documentData.get("name").toString(),
                         documentData.get("city").toString(),
                         documentData.get("price").toString(),
                         documentData.get("rate") as ArrayList<Int>,
                         documentData.get("transporterPhoneNumber").toString(),
-                        documentData.get("type").toString()
+                        documentData.get("").toString(),
+                        documentData.get("transporterEmail").toString(),
                     )
                     carTransporterList.add(transporter)
 
@@ -160,10 +155,5 @@ class CarTransporterFragment : Fragment() {
                 }
             }
     }
-    private fun loadFragment(fragment: Fragment){
-        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout,fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
+
 }

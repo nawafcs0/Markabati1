@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Admin.RequestTransporterDetailFragment"
+    android:background="#E0E6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/backBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:padding="5dp"
+                        android:src="@drawable/back_vik" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/addTruckAr"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="33sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/name_vik"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:text="@string/nameAr"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#605E5E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/adminTransporterReq_Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/phone_vik"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:text="@string/phoneNumAr"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#605E5E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/adminTransporterReq_phone"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/city_vik"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:text="@string/cityAr"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#605E5E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/adminTransporterReq_city"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            tools:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:weightSum="4"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+
+                    <TextView
+                        android:id="@+id/adminTransporterReq_price"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/price"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:layout_margin="8dp">
+
+            <Button
+                android:id="@+id/adminTransporterReq_btnAccept"
+                android:background="@drawable/btn_details_ic"
+                android:layout_width="300dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="قبول"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+
+                />
+
+
+            <Button
+                android:id="@+id/adminTransporterReq_btnReject"
+                android:background="@drawable/btn_details_ic"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="رفض"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

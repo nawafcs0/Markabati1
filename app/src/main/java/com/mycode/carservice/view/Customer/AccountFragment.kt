@@ -1,4 +1,4 @@
-package com.mycode.carservice.view
+package com.mycode.carservice.view.Customer
 
 import android.os.Bundle
 import android.util.Log
@@ -13,9 +13,8 @@ import com.mycode.carservice.R
 import com.mycode.carservice.databinding.FragmentAccountBinding
 import com.mycode.carservice.model.User
 import com.mycode.carservice.model.WorkShop
-import com.mycode.carservice.model.userId
+import com.mycode.carservice.view.Workshop.WorkShopDetailsFragment
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "userId"
 private const val ARG_PARAM2 = "param2"
@@ -60,22 +59,14 @@ class AccountFragment : Fragment() {
                         documentData.get("city").toString(),
                         documentData.get("password").toString(),
                         documentData.get("email").toString(),
+                        documentData.get("loginType").toString(),
+
                     )
                         fillXml(profile)
+//                        loadDetails(profile.username)
 
                     }
-//                    val workShop = WorkShop(
-//                        documentData.get("city").toString(),
-//                        documentData.get("closingHours").toString(),
-//                        documentData.get("detail").toString(),
-//                        documentData.get("img").toString(),
-//                        documentData.get("lastWorkingDay").toString(),
-//                        documentData.get("name").toString(),
-//                        documentData.get("openingHours").toString(),
-//                        documentData.get("rating") as ArrayList<Boolean> /* = java.util.ArrayList<kotlin.Boolean> */,
-//                        documentData.get("startWorkingDay").toString(),
-//                        documentData.get("phoneNumber").toString()
-//                    )
+
 
                     Log.d("TAGTAG", "${document.id} => ${document.data}")
                 }
@@ -93,6 +84,17 @@ class AccountFragment : Fragment() {
     private fun loadFragment(fragment: Fragment){
         val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout,fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+    private fun loadDetails(userName: String) {
+        val bundle = Bundle()
+//        bundle.putInt("workShop", position)
+        bundle.putString("userName",userName)
+        val fragment = RequestWorkshopFragment()
+        fragment.arguments = bundle
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(com.mycode.carservice.R.id.frame_layout, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

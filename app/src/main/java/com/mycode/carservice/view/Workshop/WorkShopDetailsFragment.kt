@@ -1,24 +1,20 @@
 package com.mycode.carservice.view.Workshop
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.mycode.carservice.R
 import com.mycode.carservice.model.WorkShop
+import com.mycode.carservice.view.Customer.RequestWorkshopFragment
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.SupervisorJob
 
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "workShop"
 
@@ -82,12 +78,30 @@ class WorkShopDetailsFragment() : Fragment() {
 
 
         fab.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + param1.phoneNumber))
-            startActivity(intent)
+
+            loadDetails(param1)
         }
 
 
     }
+    private fun loadFragment(fragment: Fragment){
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_layout,fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+    private fun loadDetails(workshop: WorkShop) {
+        val bundle = Bundle()
+//        bundle.putInt("workShop", position)
+        bundle.putSerializable("workshop",workshop)
+        val fragment = RequestWorkshopFragment()
+        fragment.arguments = bundle
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(com.mycode.carservice.R.id.frame_layout, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 
 
 

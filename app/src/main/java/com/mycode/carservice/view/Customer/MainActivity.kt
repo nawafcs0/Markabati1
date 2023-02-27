@@ -1,4 +1,4 @@
-package com.mycode.carservice.view
+package com.mycode.carservice.view.Customer
 
 
 import android.Manifest

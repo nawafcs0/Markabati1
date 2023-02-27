@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.Workshop.WorkshopFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/admin_addSpare"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:src="@drawable/addviktor"
+            android:background="@drawable/addviktor"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="411dp">
+
+            <SearchView
+                android:id="@+id/admin_spareParts_searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="hint"
+                app:defaultQueryHint="@string/search"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/admin_sparePartsRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

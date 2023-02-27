@@ -3,9 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/accepted_req_rv.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/activity_admin_main.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/activity_transporter_main.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/activity_workshop_main.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/car_transporter_rv_layout.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_accepted_req.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_account.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_add_transporter.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_admin_request.xml" value="0.24322916666666666" />
         <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_car_transporter.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_car_transporter_details.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_log_in.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_reqeust_workshop.xml" value="0.2086956590966153" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_request_detail.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_request_transporter.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_request_transporter_detail.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_requests.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_sign_up.xml" value="0.2734375" />
         <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_spare_part_details.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_spare_parts.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_spare_parts2.xml" value="0.2086956590966153" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_spare_parts_detail.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_transporter_accepted_req.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_transporter_account.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_transporter_reqdetail.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_work_shop_detalis.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_workshop.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_workshop_account.xml" value="0.2754782700075322" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_workshop_req_details.xml" value="0.25625" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/fragment_workshop_requests.xml" value="0.259375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/home_fragment.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/requests_rv_layout.xml" value="0.259375" />
         <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/spare_parts_rv_layout.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/workshop_accepted_req_rv.xml" value="0.2754782700075322" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/workshop_customer_req_rv.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/layout/workshop_rv_layout.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/menu/admin_nav.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/menu/bottom_nav.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/menu/transporter_nav.xml" value="0.2734375" />
+        <entry key="..\:/Users/Nawaf/courses/graduate project/markabati-master/app/src/main/res/menu/workshop_nav.xml" value="0.2734375" />
       </map>
     </option>
   </component>

@@ -48,17 +48,18 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+
             <TextView
                 android:id="@+id/workshop_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="start"
-                android:drawableStart="@drawable/ic_star"
                 android:text="@string/workshop_rate"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_star" />
 
         </LinearLayout>
 

@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -61,10 +60,10 @@ class WorkshopFragment : Fragment(), LocationListener {
         super.onViewCreated(view, savedInstanceState)
         datainit()
         val layoutManager = LinearLayoutManager(context)
-        val btn = view.findViewById<Button>(R.id.addBtn)
-        btn.setOnClickListener {
-            loadFragment(AddWorkShopFragment())
-        }
+//        val btn = view.findViewById<Button>(R.id.addBtn)
+//        btn.setOnClickListener {
+//            loadFragment(AddWorkShopFragment())
+//        }
         recyclerView = view.findViewById(com.mycode.carservice.R.id.workshop_rv)
         //Request location permission
         searchView = view.findViewById(R.id.search_workshop)
@@ -72,7 +71,6 @@ class WorkshopFragment : Fragment(), LocationListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 TODO("Not yet implemented")
             }
-
             override fun onQueryTextChange(p0: String?): Boolean {
                 if (p0 != null)
                 {
@@ -134,16 +132,18 @@ class WorkshopFragment : Fragment(), LocationListener {
                     Log.d("TAG", "${document.id} => ${document.data}")
                     val documentData = document.data
                     val workShop = WorkShop(
+                        "",
                         documentData.get("city").toString(),
                         documentData.get("closingHours").toString(),
                         documentData.get("detail").toString(),
                         documentData.get("img").toString(),
                         documentData.get("lastWorkingDay").toString(),
                         documentData.get("name").toString(),
-                        documentData.get("openingHours").toString(),
-                        documentData.get("rating") as ArrayList<Int> /* = java.util.ArrayList<kotlin.Boolean> */,
+                        documentData.get("openingHours").toString() /* = java.util.ArrayList<kotlin.Boolean> */,
+                        documentData.get("rating") as ArrayList<Int>,
                         documentData.get("startWorkingDay").toString(),
-                        documentData.get("phoneNumber").toString()
+                        documentData.get("phoneNumber").toString(),
+                        documentData.get("workshopEmail").toString(),
                     )
                     workshopsList.add(workShop)
                     Log.d("TAGTAG", "${document.id} => ${document.data}")

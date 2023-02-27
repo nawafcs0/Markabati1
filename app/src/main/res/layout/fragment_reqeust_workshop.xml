@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Customer.RequestWorkshopFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اسم السيارة"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
+                android:textSize="23sp"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/CustomerReqDetails_carName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/etdetails_bg"
+                android:layout_margin="16dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" رقم الجوال"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
+                android:textSize="23sp"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/CustomerReqDetails_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/etdetails_bg"
+                android:layout_margin="16dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" وصف المشكلة"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/CustomerReqDetails_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textarea_ic"
+                android:layout_margin="16dp"
+                android:inputType="text|textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="16dp">
+
+
+            <Button
+                android:id="@+id/CustomerReqBtn"
+                android:background="@drawable/btn_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="رفع الطلب"
+                android:layout_weight="1"
+                android:layout_margin="18dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

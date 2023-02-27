@@ -24,7 +24,7 @@
             android:scaleType="fitCenter"
             android:layout_margin="10dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/carsflat" />
+            android:src="@drawable/spae_part_ic" />
 
         <TextView
             android:id="@+id/requests_title"

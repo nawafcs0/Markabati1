@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mycode.carservice.R
 import com.mycode.carservice.model.CarTransporter
-import com.mycode.carservice.model.TransporterTable
 import com.squareup.picasso.Picasso
 
 class CarTransporterAdapter(private var carTransporterList:List<CarTransporter>) :

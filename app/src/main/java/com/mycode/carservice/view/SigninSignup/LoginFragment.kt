@@ -4,7 +4,6 @@ import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.provider.Settings.Global.putString
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,13 +11,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat.apply
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.databinding.FragmentLogInBinding
+import com.mycode.carservice.model.userEmail
 import com.mycode.carservice.model.userId
-import com.mycode.carservice.view.MainActivity
+import com.mycode.carservice.model.userName
+import com.mycode.carservice.view.Customer.MainActivity
+import com.mycode.carservice.view.TransporterOwner.TransporterMainActivity
+import com.mycode.carservice.view.WorkshopOwner.WorkshopMainActivity
 
 
 class LoginFragment : Fragment() {
@@ -73,18 +75,35 @@ class LoginFragment : Fragment() {
                             val documentData = document.data
                             Log.d("TAG", "${document.id} => ${document.data}")
                             val fbPassword = documentData.get("password").toString()
+
                             if (binding.passTxt.text.toString() == fbPassword) {
+                                val loginType = documentData.get("loginType").toString()
                                 userId = document.id
+                                userName =documentData.get("username").toString()
+                                userEmail =documentData.get("email").toString()
                                 email = binding.emailTxt.text.toString()
                                 password = binding.passTxt.text.toString()
 
                                 sharedPreferences.edit().putString("email",binding.emailTxt.text.toString()).apply()
                                 sharedPreferences.edit().putString("pas",binding.passTxt.text.toString()).apply()
+                                sharedPreferences.edit().putString("loginType",loginType).apply()
 //                                sharedPreferences.edit().apply()
 
-                                val intent = Intent(requireActivity(),MainActivity::class.java)
-                                startActivity(intent)
-//                                loadFragment(HomeFragment())
+                                when (loginType) {
+                                    "عميل" -> {
+                                        val intent = Intent(requireActivity(), MainActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                    "ورشة" -> {
+                                        val intent = Intent(requireActivity(), WorkshopMainActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                    "ناقلة" -> {
+                                        val intent = Intent(requireActivity(), TransporterMainActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                }
+
                             } else {
                                 Toast.makeText(
                                     requireContext(),

@@ -11,16 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.core.QueryListener
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.adapter.SparePartsAdapter
-import com.mycode.carservice.model.CarTransporter
 import com.mycode.carservice.model.SpareParts
-import com.mycode.carservice.model.WorkShop
-import com.mycode.carservice.model.globalCity
-import com.mycode.carservice.view.Workshop.AddWorkShopFragment
+import com.mycode.carservice.view.Admin.AddSparePartsFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,10 +63,7 @@ class SparePartsFragment : Fragment() {
 
         datainit()
         val layoutManager= GridLayoutManager(context,2)
-        val btn = view.findViewById<Button>(R.id.addBtn)
-        btn.setOnClickListener {
-            loadFragment(AddSparePartsFragment())
-        }
+
         recyclerView=view.findViewById(R.id.spareParts_rv)
         recyclerView.layoutManager=layoutManager
         recyclerView.setHasFixedSize(true)

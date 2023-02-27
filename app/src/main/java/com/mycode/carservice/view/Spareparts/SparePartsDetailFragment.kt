@@ -13,10 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
-import com.mycode.carservice.model.NewSpareRequest
-import com.mycode.carservice.model.SpareParts
-import com.mycode.carservice.model.userId
-import com.mycode.carservice.view.Transportation.CarTransporterDetailsFragment
+import com.mycode.carservice.model.*
 import com.squareup.picasso.Picasso
 import java.time.LocalDate
 
@@ -27,7 +24,6 @@ private const val ARG_PARAM1 = "spareParts"
 
 
 class SparePartsDetailFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var param1: SpareParts
 
     val db = Firebase.firestore
@@ -75,9 +71,21 @@ class SparePartsDetailFragment : Fragment() {
             Picasso.get().load(param1.img).resize(1100,800).into(spareImg)
 
         fab.setOnClickListener(View.OnClickListener {
-            val newSparePart = NewSpareRequest(sparePartId, userId,LocalDate.now().plusDays(param1.daysToDeliver).toString(),param1.img)
+//            val newSparePart = NewSpareRequest(sparePartId, userId,LocalDate.now().plusDays(param1.daysToDeliver).toString(),param1.img)
+            val requestSpareParts=SparePartsCustomerReq(
+                param1.partId,
+                param1.partName,
+                param1.price,
+                param1.type,
+                param1.img,
+                param1.city,
+                userName,
+                userId,
+                userEmail,
+                LocalDate.now().plusDays(param1.daysToDeliver).toString()
+            )
             db.collection("SparePartsRequests")
-                .add(newSparePart).addOnSuccessListener {
+                .add(requestSpareParts).addOnSuccessListener {
                     Log.d("TAG", "onViewCreated: ${it.id}")
                     Toast.makeText(requireContext(), "تم الطلب بنجاح!", Toast.LENGTH_SHORT).show()
 

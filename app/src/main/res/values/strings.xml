@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">خدمات السيارات</string>
+    <string name="app_name">مركبتي</string>
     <string name="home_nav">الرئيسية</string>
     <string name="requests_nav">طلباتي</string>
     <string name="account_nav">حسابي</string>
@@ -47,4 +47,27 @@
     <string name="profileAr2">الشحصي</string>
     <string name="nameAr">الاسم</string>
     <string name="cityAr">المدينة</string>
+
+
+    <string-array name="loginType">
+        <item>نوع التسجيل</item>
+        <item>عميل</item>
+        <item>ورشة</item>
+        <item>ناقلة</item>
+    </string-array>
+
+    <string-array name="requestType">
+        <item>نوع الطلبات</item>
+        <item>قطع الغيار</item>
+        <item>ورشة</item>
+        <item>ناقلة</item>
+    </string-array>
+
+    <string-array name="customerRequestType">
+        <item>نوع الطلبات</item>
+        <item>قطع الغيار</item>
+        <item>ورشة</item>
+        <item>ناقلة</item>
+    </string-array>
+
 </resources>

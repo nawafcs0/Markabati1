@@ -1,22 +1,14 @@
 package com.mycode.carservice.adapter
 
-import android.app.Activity
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.mycode.carservice.R
-import com.mycode.carservice.model.Services
 import com.mycode.carservice.model.WorkShop
-import com.mycode.carservice.model.Workshops
-import com.mycode.carservice.view.MainActivity
-import com.mycode.carservice.view.Workshop.WorkshopFragment
 import com.squareup.picasso.Picasso
 
 class WorkshopAdapter(private var workshopList:List<WorkShop>) :

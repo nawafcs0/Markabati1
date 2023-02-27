@@ -13,7 +13,6 @@ import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.databinding.FragmentAddTransporterBinding
 import com.mycode.carservice.model.TransporterTable
-import com.mycode.carservice.view.Transportation.CarTransporterFragment
 
 class AddTransporterFragment : Fragment() {
     lateinit var binding: FragmentAddTransporterBinding
@@ -38,7 +37,15 @@ class AddTransporterFragment : Fragment() {
                 phone.isNotEmpty()){
                 var rate = ArrayList<Int>()
                 rate.add(5)
-                add(TransporterTable(name.toString(),city.toString(),price.toString(),rate,phone.toString(),type.toString()))
+                add(TransporterTable(
+                    "",
+                    name.toString(),
+                    city.toString(),
+                    price.toString(),
+                    rate,
+                    phone.toString(),
+                    ""
+                ))
                 loadFragment(CarTransporterFragment())
 
             }else{
@@ -55,9 +62,12 @@ class AddTransporterFragment : Fragment() {
         db.collection("Transporter")
             .add(Transporter)
             .addOnSuccessListener { documentReference ->
+                Toast.makeText(context,"تم رفع الطلب بنجاح ",Toast.LENGTH_LONG).show()
                 Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
             }
             .addOnFailureListener { e ->
+                Toast.makeText(context,"حدث خطأ, حاول مرة اخرى",Toast.LENGTH_LONG).show()
+
                 Log.w("TAG", "Error adding document", e)
             }
     }

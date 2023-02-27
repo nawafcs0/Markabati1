@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.WorkShopDetailsFragment"
+    tools:context=".view.Workshop.WorkShopDetailsFragment"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -239,10 +239,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_call"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
-        app:tint="#6200EE"
-        />
+        android:src="@drawable/ic_baseline_add_shopping_cart_24"
+        app:tint="#6200EE" />
 
 </RelativeLayout>
