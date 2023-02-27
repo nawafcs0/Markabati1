@@ -16,7 +16,6 @@ import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
 import com.mycode.carservice.adapter.SparePartsAdapter
 import com.mycode.carservice.model.SpareParts
-import com.mycode.carservice.view.Admin.AddSparePartsFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
