@@ -16,11 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarService"
         tools:targetApi="31">
-        <activity
-            android:name=".view.Admin.AdminMainActivity"
-            android:exported="true" >
 
-        </activity>
         <activity
             android:name=".view.TransporterOwner.TransporterMainActivity"
             android:exported="true" >
