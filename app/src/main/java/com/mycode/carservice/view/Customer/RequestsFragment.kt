@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mycode.carservice.R
-import com.mycode.carservice.adapter.AdminAdapters.UploadedSparePartsAdapter
 import com.mycode.carservice.adapter.CustomerWorkshopReqAdapter
 import com.mycode.carservice.adapter.RequestsAdapter
 import com.mycode.carservice.adapter.TransporterAdapters.UploadedTransporterAdapter
